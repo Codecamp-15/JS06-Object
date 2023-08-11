@@ -3,10 +3,13 @@
 // - สร้างฟังก์ชันคำนวณราคาที่แท้จริงของ object (ราคาหลังหักส่วนลด)
 
 const calcPrice = function (obj) {
-  let netPrice = obj.amount * obj.pricePerProd - (obj.discount || 0);
+  let netPrice =
+    obj.amount * obj.pricePerProd -
+    ((obj.amount * obj.pricePerProd * obj.discount) / 100 || 0);
   return netPrice;
 };
 
+const prodName = prompt("Enter name");
 const amount = +prompt("Enter amount");
 const pricePerProd = +prompt("Enter price per product");
 const discount = +prompt("Enter discount in percent");
@@ -15,9 +18,9 @@ let obj;
 if (isNaN(amount) || isNaN(pricePerProd)) alert("Please enter number");
 else {
   if (discount === 0 || isNaN(discount)) {
-    obj = { amount, pricePerProd };
+    obj = { prodName, amount, pricePerProd };
   } else {
-    obj = { amount, pricePerProd, discount };
+    obj = { prodName, amount, pricePerProd, discount };
   }
 }
 
