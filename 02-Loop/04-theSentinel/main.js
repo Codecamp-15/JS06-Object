@@ -1,0 +1,23 @@
+// ให้เขียนโปรแกรมที่รับค่า key และ value ของ Properties ของ Object หนึ่ง จนกว่าจะเจอคำว่า stop ถึงหยุด   
+// และให้นำค่าเหล่านั้นมาสร้าง Object หลังจากนั้น log object นั้นออกมา
+
+const employees={};
+let name;
+let age;
+do{
+    name = prompt('Enter name of employee');
+    if(name=='stop'){
+        break
+    }
+    age = prompt('Enter age of employee')
+    if(age=='stop'){
+        break
+    }
+    employees[name]=age;
+} while(name!='stop'|| age !='stop'); 
+
+console.log(employees);
+
+
+
+
