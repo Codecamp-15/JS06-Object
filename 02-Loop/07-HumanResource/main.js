@@ -9,23 +9,14 @@ const employees = {
 };
 
 
-let person = prompt('Enter name: ');
-let name = '';
-let salary = 0;
-let address = '';
+let name = prompt('Enter name: ');
 
-function checkEmployee(person) {
-    for (let key in employees) {
-        if (person === key) {
-            name = key;
-            let emply = employees[key];
-            salary = emply['salary'];
-            address = `${emply['address']['district']}, ${emply['address']['province']}`
-            return  `Name: ${name}, salary: ${salary}, address: ${address}`;
-        }
-        return 'Not Found';
-    }
+if (employees.hasOwnProperty(name)) {
+    let personalInfo = employees[name]
+    let salary = personalInfo.salary;
+    let address = personalInfo.address;
+    alert(`Name: ${name}, salary: ${salary}, address: ${address.district}, ${address.province}`);
+
+} else {
+    alert('Not Found');
 }
-
-console.log(checkEmployee('john'));
-
