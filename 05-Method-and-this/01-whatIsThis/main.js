@@ -1,4 +1,4 @@
-ผลลัพธ์ในบรรทัดที่มี * มีค่าเป็นอะไรและเพราะอะไร;
+// ผลลัพธ์ในบรรทัดที่มี * มีค่าเป็นอะไรและเพราะอะไร;
 
 // ```js
 // let user = {
@@ -11,10 +11,11 @@
 // (user.sayHi)(); // *
 
 let user = {
-  name: "John",
+  name: 'John',
   sayHi: function () {
-    console.log(this.name);
+    console.log(`hi ${this.name}`);
   },
 };
 
-user.sayHi(); //return 'John'
+user.sayHi();
+//return 'John'

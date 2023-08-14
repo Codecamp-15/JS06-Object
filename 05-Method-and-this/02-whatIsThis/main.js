@@ -1,7 +1,7 @@
-var name = "Joe";
+var name = 'Joe';
 function makeUser() {
   return {
-    name: "John",
+    name: 'John',
     ref: this, //
   };
 }
