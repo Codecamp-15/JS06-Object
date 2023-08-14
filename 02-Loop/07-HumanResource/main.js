@@ -8,15 +8,32 @@ const employees = {
     sarah: { salary: 2200, address: { district: 'Sriraja', province: 'Chonburi' } }
 };
 
+// let name = prompt('Enter name: ');
+
+// if (employees.hasOwnProperty(name)) {
+//     let personalInfo = employees[name]
+//     let salary = personalInfo.salary;
+//     let address = personalInfo.address;
+//     alert(`Name: ${name}, salary: ${salary}, address: ${address.district}, ${address.province}`);
+
+// } else {
+//     alert('Not Found');
+// }
+
 
 let name = prompt('Enter name: ');
 
-if (employees.hasOwnProperty(name)) {
-    let personalInfo = employees[name]
-    let salary = personalInfo.salary;
-    let address = personalInfo.address;
-    alert(`Name: ${name}, salary: ${salary}, address: ${address.district}, ${address.province}`);
+function employeeInfo (name) {
+    for (let key in employees) {
+        if (key === name) {
+            let personalInfo = employees[name]
+            let salary = personalInfo.salary;
+            let address = personalInfo.address;
+            return (`Name: ${name}, salary: ${salary}, address: ${address.district}, ${address.province}`);
+        }
+    }
+    return 'Not Found';
 
-} else {
-    alert('Not Found');
 }
+
+console.log(employeeInfo(name))
