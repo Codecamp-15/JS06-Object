@@ -86,6 +86,3 @@ log(user.age);
 // - bracket notation ใช้กับคีย์ที่เป็น string หรือ ตัวแปรที่เก็บ string
 // - for( <key> in <obj>) JS จะ auto reassign key ใหม่ให้ทุกรอบ (string)
 // - obj[key] = obj[key] + new  => container = value + new
-
-
-// add for push
