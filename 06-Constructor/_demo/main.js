@@ -34,3 +34,14 @@ dev2.dev();
 const dev3 = new Developer('Jane', 50);
 log(dev3);
 dev3.dev();
+
+Math.max(5, 4, 2, 20); //20
+const now = new Date();
+
+//Date Object
+now.getDay()
+now.getHours()
+now
+
+const formData = new FormData()
+formData = append(key, value);
