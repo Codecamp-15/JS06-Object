@@ -47,3 +47,24 @@ dev2.dev(); // I develop some features
 const dev3 = new Developer("Jane", 50);
 log(dev3); // {name: 'Jane', age: 50, role: 'dev', salary: 40000, dev: ƒ}
 dev3.dev(); // I develop some features
+
+////////////////////////////////////////
+// Built In Objects ที่จะเจอบ่อยๆ
+// 1. console
+// 2. Math
+// 3. Date
+// 4. FormData
+
+console.log("Test");
+Math.max(5, 4, 2, 20); // 20
+
+const now = new Date();
+
+// Date Object
+now.getDay();
+now.getHours();
+now;
+
+const formData = new FormData();
+formData.append("key", "value");
+formData;
